@@ -75,6 +75,11 @@ int main (int argc, char * argv[])
 	hge->System_Shutdown();
 	hge->Release();
 
-	_CrtDumpMemoryLeaks();
+	if(_CrtDumpMemoryLeaks()){
+		//Leaks :(
+	} else {
+		//No Leaks :)
+	}
+
 	return 0;
 }
