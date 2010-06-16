@@ -17,8 +17,9 @@
 #include "hgeparticle.h"
 
 #include "global.h"
-
-#include "XInput.h"
+#include "Input.h"
+#include "Controller.h"
+#include "Keyboard.h"
 
 // Pointer to the HGE interface.
 HGE *hge=0;
@@ -26,9 +27,27 @@ HGE *hge=0;
 bool FrameFunc();
 bool RenderFunc();
 
+std::vector<Input*> controllers;
+
 bool FrameFunc()
 {
 	float dt=hge->Timer_GetDelta();
+
+	if(hge->Input_GetKeyState(HGEK_ESCAPE)){
+		return true;
+	}
+
+	for(int i=0; i<(int)controllers.size(); i++){
+		controllers[i]->update();
+		std::cout << controllers[i]->GetA() << "; " 
+					<< controllers[i]->GetB() << "; " 
+					<< controllers[i]->GetC() << "; " 
+					<< controllers[i]->GetD() << "; " 
+					<< controllers[i]->GetX() << "; "
+					<< controllers[i]->GetY() << "; "
+					<< controllers[i]->AimX() << "; "
+					<< controllers[i]->AimY() << "\n";
+	}
 
 	return false;
 }
@@ -38,9 +57,6 @@ bool RenderFunc()
 {
 	hge->Gfx_BeginScene();
 	hge->Gfx_Clear(0);
-
-
-
 
 	//mainFont->printf(5, 5, HGETEXT_LEFT, "dt:%.3f\nFPS:%d", hge->Timer_GetDelta(), hge->Timer_GetFPS());
 
@@ -53,6 +69,10 @@ bool RenderFunc()
 //int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 int main (int argc, char * argv[])
 {
+
+	controllers.push_back(new Controller(0));
+	controllers.push_back(new Keyboard());
+
 	hge = hgeCreate(HGE_VERSION);
 
 	hge->System_SetState(HGE_LOGFILE, "dagame.log");
@@ -77,6 +97,11 @@ int main (int argc, char * argv[])
 
 	hge->System_Shutdown();
 	hge->Release();
+
+	while(controllers.size() > 0){
+		delete controllers[0];
+		controllers.erase(controllers.begin(), controllers.begin()+1);
+	}
 
 	if(_CrtDumpMemoryLeaks()){
 		//Leaks :(
