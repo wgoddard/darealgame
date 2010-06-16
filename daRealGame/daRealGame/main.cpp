@@ -4,6 +4,9 @@
 *
 */
 
+#define _CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
+
 #include <iostream>
 #include <vector>
 
@@ -34,10 +37,9 @@ bool FrameFunc()
 bool RenderFunc()
 {
 	hge->Gfx_BeginScene();
-		hge->Gfx_Clear(0);
+	hge->Gfx_Clear(0);
 
-		//mainFont->printf(5, 5, HGETEXT_LEFT, "dt:%.3f\nFPS:%d", hge->Timer_GetDelta(), hge->Timer_GetFPS());
-		
+	//mainFont->printf(5, 5, HGETEXT_LEFT, "dt:%.3f\nFPS:%d", hge->Timer_GetDelta(), hge->Timer_GetFPS());
 
 	hge->Gfx_EndScene();
 
@@ -72,5 +74,7 @@ int main (int argc, char * argv[])
 
 	hge->System_Shutdown();
 	hge->Release();
+
+	_CrtDumpMemoryLeaks();
 	return 0;
 }
