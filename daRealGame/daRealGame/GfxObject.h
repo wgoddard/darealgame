@@ -1,8 +1,8 @@
 #pragma once
-#include "collideable.h"
+#include "collidable.h"
 
 class GfxObject :
-	public Collideable
+	public Collidable
 {
 public:
 	GfxObject(void);

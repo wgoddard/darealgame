@@ -181,7 +181,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Collideable.cpp"
+				RelativePath=".\Collidable.cpp"
 				>
 			</File>
 			<File
@@ -239,7 +239,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Collideable.h"
+				RelativePath=".\Collidable.h"
 				>
 			</File>
 			<File
