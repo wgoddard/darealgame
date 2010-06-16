@@ -62,8 +62,8 @@ int main (int argc, char * argv[])
 	hge->System_SetState(HGE_LOGFILE, "hq2.log");
 	hge->System_SetState(HGE_FRAMEFUNC, FrameFunc);
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
-	hge->System_SetState(HGE_TITLE, "Heart Quackers 2");
-	//hge->System_SetState(HGE_FPS, 100);
+	hge->System_SetState(HGE_TITLE, "Heart Quakers 2");
+	hge->System_SetState(HGE_FPS, 100);
 	hge->System_SetState(HGE_WINDOWED, S_WINDOWED);
 	hge->System_SetState(HGE_SCREENWIDTH, S_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, S_HEIGHT);
@@ -86,11 +86,7 @@ int main (int argc, char * argv[])
 	hge->System_Shutdown();
 	hge->Release();
 
-	if(_CrtDumpMemoryLeaks()){
-		//Leaks :(
-	} else {
-		//No Leaks :)
-	}
+	_CrtDumpMemoryLeaks();
 
 	return 0;
 }
