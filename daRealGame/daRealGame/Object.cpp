@@ -10,3 +10,6 @@ Object::~Object(void)
 	//Do nothing?
 }
 
+void Object::toString(std::ostream stream){
+	stream << "I'm an object";
+}

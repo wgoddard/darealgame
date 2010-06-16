@@ -10,5 +10,5 @@ public:
 	Object(void);
 	~Object(void);
 
-	//void toString(ostream stream);
+	void toString(std::ostream stream);
 };
