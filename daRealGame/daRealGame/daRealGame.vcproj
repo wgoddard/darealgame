@@ -226,6 +226,26 @@
 				<Filter
 					Name="Playable"
 					>
+					<File
+						RelativePath=".\Icon.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Janitor.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Ninja.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Rockstar.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Voodoo.cpp"
+						>
+					</File>
 				</Filter>
 			</Filter>
 			<Filter
@@ -324,6 +344,26 @@
 				<Filter
 					Name="Playable"
 					>
+					<File
+						RelativePath=".\Icon.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Janitor.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Ninja.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Rockstar.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Voodoo.h"
+						>
+					</File>
 				</Filter>
 				<Filter
 					Name="Enemies"

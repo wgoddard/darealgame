@@ -25,6 +25,6 @@ public:
 	double AimX(void){ return ax; }
 	double AimY(void){ return ay; }
 
-	virtual void update() = 0;
-	virtual void rumble() = 0;
+	virtual void update(){};
+	virtual void rumble(){};
 };
