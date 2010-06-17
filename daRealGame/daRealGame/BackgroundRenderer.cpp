@@ -6,7 +6,7 @@ BackgroundRenderer::BackgroundRenderer(void){
 	dscroll = -50.0f;
 
 	loadTile(0);
-	loadTile(1);
+	//loadTile(1);
 }
 
 BackgroundRenderer::~BackgroundRenderer(void){
@@ -20,7 +20,9 @@ BackgroundRenderer::~BackgroundRenderer(void){
 void BackgroundRenderer::update(float &dt){
 	currentScrollPos += (dscroll*dt);
 
-	if(1024*tiles.size() < currentScrollPos+1024){
+	std::cout << 1024*tiles.size() + currentScrollPos << " & " << 1300 << std::endl;
+
+	if(1024*tiles.size() + currentScrollPos < 1300){
 		loadTile(tiles.size());
 	}
 }
