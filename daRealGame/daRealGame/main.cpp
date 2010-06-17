@@ -96,7 +96,7 @@ int main (int argc, char * argv[])
 	hge->System_SetState(HGE_FRAMEFUNC, FrameFunc);
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_TITLE, "Heart Quakers 2");
-	hge->System_SetState(HGE_FPS, 100);
+	//hge->System_SetState(HGE_FPS, 100);
 	hge->System_SetState(HGE_WINDOWED, S_WINDOWED);
 	hge->System_SetState(HGE_SCREENWIDTH, S_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, S_HEIGHT);

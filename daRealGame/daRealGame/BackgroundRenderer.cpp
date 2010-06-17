@@ -18,8 +18,6 @@ BackgroundRenderer::~BackgroundRenderer(void){
 void BackgroundRenderer::update(float &dt){
 	currentScrollPos += (dscroll*dt);
 
-	std::cout << 1024*tiles.size() + currentScrollPos << " & " << 1300 << std::endl;
-
 	if(1024*tiles.size() + currentScrollPos < 1300){
 		loadTile(tiles.size());
 	}
@@ -50,7 +48,7 @@ void BackgroundRenderer::loadTile(int x){
 
 	HTEXTURE blah = hge->Texture_Load(s.data());
 
-	hgeSprite *tempSprite = new hgeSprite(blah, 0, 0, 1024, 720);
+	hgeSprite *tempSprite = new hgeSprite(blah, 1, 1, 1022, 720);
 
 	tiles.push_back(tempSprite);
 }
