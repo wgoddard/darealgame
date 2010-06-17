@@ -1,16 +1,24 @@
 #include "Character.h"
 
-Character::Character(HTEXTURE tex) : GfxObject(tex) {
+Character::Character(HTEXTURE tex) {
 	my_max_health = 10;
 	my_health = my_max_health;
 	my_attack_speed = 3;
 	my_ranged_speed = 2;
-	my_hspeed = 10;
-	my_vspeed = 10;
+	my_hspeed = 200;
+	my_vspeed = 150;
+
+	my_x = 0;
+	my_y = 0;
+
+	int my_frames[] = {2, 2, 2, 2, 2, 2, 2, 2};
+	int my_fps[] =    {2, 2, 2, 2, 2, 2, 2, 2};
+
+	my_sprite = new hgeSprite(tex, 0, 0, 128, 128);
 }
 
 Character::~Character(void) {
-	
+	delete my_sprite;
 }
 
 void Character::hit(Character &other, int damage) {
@@ -25,11 +33,10 @@ void Character::hit(Character &other, int damage) {
 	}
 }
 
-void Character::Update(float &dt){
-
+void Character::Update(float &dt, float rel_x_speed){
+	my_x += rel_x_speed;
 }
 
 void Character::Render(){
-	//if(my_sprite != 0)
-		//my_sprite->Render(my_x, my_y);
+	my_sprite->Render(my_x, my_y);
 }

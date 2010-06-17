@@ -25,4 +25,6 @@ public:
 	~Playable(void);
 
 	int getCharacterType(){ return characterType; }
+
+	void Update(float &dt, float rel_x_speed);
 };

@@ -3,7 +3,7 @@
 BackgroundRenderer::BackgroundRenderer(void){
 	currentScrollPos = 0.0f;
 	currentTile = 0;
-	dscroll = -50.0f;
+	dscroll = 0.0f;
 }
 
 BackgroundRenderer::~BackgroundRenderer(void){

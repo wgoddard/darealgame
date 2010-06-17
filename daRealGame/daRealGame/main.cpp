@@ -50,8 +50,17 @@ bool FrameFunc()
 
 	bg->update(dt);
 
+	float map_speed = bg->getSpeed() * dt;
+
+	std::cout << map_speed << std::endl;
+
 	if(hge->Input_GetKeyState(HGEK_ESCAPE)){
 		return true;
+	}
+
+	int i = 0;
+	for(i = 0; i<(int)players.size(); i++){
+		players[i]->Update(dt, map_speed);
 	}
 
 	return false;
@@ -64,10 +73,15 @@ bool RenderFunc()
 
 	hge->Gfx_BeginScene();
 
+
 	//Fullscreen redrawing
 	//hge->Gfx_Clear(0);
 
 	bg->render();
+
+	for(i = 0; i<(int)players.size(); i++){
+		players[i]->Render();
+	}
 
 	for(i = 0; i<(int)icons.size(); i++){
 		icons[i]->Render(250.0f*i, 20);
@@ -107,15 +121,18 @@ int main (int argc, char * argv[])
 	if(hge->System_Initiate()) 
 	{
 		bg = new BackgroundRenderer();
+		bg->setSpeed(-10);
+
 		mainFont = new hgeFont("data/fonts/Interfaces.fnt");
 		statFont = new hgeFont("data/fonts/Numbers.fnt");
 
 		iconsTex = hge->Texture_Load("data/characters/Icons.png");
+		HTEXTURE blankChar = hge->Texture_Load("data/characters/Blank.png");
 
-		players.push_back(new Janitor(iconsTex, controllers[0]));
-		players.push_back(new Rockstar(iconsTex, controllers[1]));
-		players.push_back(new Ninja(iconsTex, controllers[2]));
-		players.push_back(new Voodoo(iconsTex, controllers[3]));
+		players.push_back(new Janitor(blankChar, controllers[0]));
+		players.push_back(new Rockstar(blankChar, controllers[1]));
+		players.push_back(new Ninja(blankChar, controllers[2]));
+		players.push_back(new Voodoo(blankChar, controllers[3]));
 
 		icons.push_back(new Icon(iconsTex, players[0], statFont));
 		icons.push_back(new Icon(iconsTex, players[1], statFont));

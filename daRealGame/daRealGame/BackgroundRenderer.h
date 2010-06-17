@@ -27,6 +27,6 @@ public:
 	void update(float &dt);
 	void render();
 
-	void setSpeed(float newSpeed){ currentScrollPos = newSpeed; }
-	float getSpeed(){ return currentScrollPos; }
+	void setSpeed(float newSpeed){ dscroll = newSpeed; }
+	float getSpeed(){ return dscroll; }
 };
