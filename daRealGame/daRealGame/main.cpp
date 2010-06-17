@@ -20,11 +20,15 @@
 #include "Input.h"
 #include "Controller.h"
 #include "Keyboard.h"
+#include "BackgroundRenderer.h"
 
 // Pointer to the HGE interface.
 HGE *hge=0;
 
 hgeFont* mainFont;
+hgeFont* statFont;
+
+BackgroundRenderer *bg;
 
 bool FrameFunc();
 bool RenderFunc();
@@ -32,6 +36,8 @@ bool RenderFunc();
 bool FrameFunc()
 {
 	float dt=hge->Timer_GetDelta();
+
+	bg->update(dt);
 
 	if(hge->Input_GetKeyState(HGEK_ESCAPE)){
 		return true;
@@ -45,6 +51,8 @@ bool RenderFunc()
 {
 	hge->Gfx_BeginScene();
 	hge->Gfx_Clear(0);
+
+	bg->render();
 
 	mainFont->printf(5, 5, HGETEXT_LEFT, "dt:%.3f\nFPS:%d", hge->Timer_GetDelta(), hge->Timer_GetFPS());
 
@@ -73,7 +81,9 @@ int main (int argc, char * argv[])
 
 	if(hge->System_Initiate()) 
 	{
-		mainFont = new hgeFont("data/fonts/Segoe_Script_20.fnt");
+		bg = new BackgroundRenderer();
+		mainFont = new hgeFont("data/fonts/Interfaces.fnt");
+		statFont = new hgeFont("data/fonts/Numbers.fnt");
 
 		//Get things rolling.
 		hge->System_Start();
@@ -82,6 +92,8 @@ int main (int argc, char * argv[])
 	// Clean up and shutdown
 
 	delete mainFont;
+	delete statFont;
+	delete bg;
 
 	hge->System_Shutdown();
 	hge->Release();

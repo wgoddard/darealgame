@@ -232,6 +232,10 @@
 				Name="World"
 				>
 				<File
+					RelativePath=".\BackgroundRenderer.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\Layer.cpp"
 					>
 				</File>
@@ -257,6 +261,10 @@
 			<Filter
 				Name="World"
 				>
+				<File
+					RelativePath=".\BackgroundRenderer.h"
+					>
+				</File>
 				<File
 					RelativePath=".\Layer.h"
 					>
