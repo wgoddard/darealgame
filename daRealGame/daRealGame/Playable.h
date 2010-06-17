@@ -5,6 +5,6 @@ class Playable :
 	public Character
 {
 public:
-	Playable(void);
+	Playable(b2Body * body, HTEXTURE tex);
 	~Playable(void);
 };

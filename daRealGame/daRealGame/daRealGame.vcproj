@@ -173,57 +173,77 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\AICharacter.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Character.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Collidable.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Controller.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\GfxObject.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Input.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Keyboard.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Layer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Level.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\main.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\Object.cpp"
+			<Filter
+				Name="Interfaces"
 				>
-			</File>
-			<File
-				RelativePath=".\Playable.cpp"
+				<File
+					RelativePath=".\Collidable.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Controller.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\GfxObject.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Input.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Keyboard.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Object.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="People"
 				>
-			</File>
-			<File
-				RelativePath=".\World.cpp"
+				<File
+					RelativePath=".\AICharacter.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Character.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Playable.cpp"
+					>
+				</File>
+				<Filter
+					Name="Enemies"
+					>
+				</Filter>
+				<Filter
+					Name="Playable"
+					>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="World"
 				>
-			</File>
+				<File
+					RelativePath=".\Layer.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Level.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\World.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -231,57 +251,77 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\AICharacter.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Character.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Collidable.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Controller.h"
-				>
-			</File>
-			<File
-				RelativePath=".\GfxObject.h"
-				>
-			</File>
-			<File
 				RelativePath=".\global.h"
 				>
 			</File>
-			<File
-				RelativePath=".\Input.h"
+			<Filter
+				Name="World"
 				>
-			</File>
-			<File
-				RelativePath=".\Keyboard.h"
+				<File
+					RelativePath=".\Layer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Level.h"
+					>
+				</File>
+				<File
+					RelativePath=".\World.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Interfaces"
 				>
-			</File>
-			<File
-				RelativePath=".\Layer.h"
+				<File
+					RelativePath=".\Collidable.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Controller.h"
+					>
+				</File>
+				<File
+					RelativePath=".\GfxObject.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Input.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Keyboard.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Object.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="People"
 				>
-			</File>
-			<File
-				RelativePath=".\Level.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Object.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Playable.h"
-				>
-			</File>
-			<File
-				RelativePath=".\World.h"
-				>
-			</File>
+				<File
+					RelativePath=".\AICharacter.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Character.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Playable.h"
+					>
+				</File>
+				<Filter
+					Name="Playable"
+					>
+				</Filter>
+				<Filter
+					Name="Enemies"
+					>
+				</Filter>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Resource Files"

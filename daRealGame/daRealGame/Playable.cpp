@@ -1,6 +1,6 @@
 #include "Playable.h"
 
-Playable::Playable(void)
+Playable::Playable(b2Body * body, HTEXTURE tex) : Character(body, tex)
 {
 }
 

@@ -1,6 +1,6 @@
 #include "AICharacter.h"
 
-AICharacter::AICharacter(void)
+AICharacter::AICharacter(b2Body *body, HTEXTURE tex) : Character(body, tex)
 {
 }
 
