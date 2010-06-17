@@ -5,6 +5,6 @@ class AICharacter :
 	public Character
 {
 public:
-	AICharacter(b2Body * body, HTEXTURE tex);
+	AICharacter(HTEXTURE tex);
 	~AICharacter(void);
 };

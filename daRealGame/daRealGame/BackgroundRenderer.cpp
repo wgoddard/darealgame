@@ -4,13 +4,11 @@ BackgroundRenderer::BackgroundRenderer(void){
 	currentScrollPos = 0.0f;
 	currentTile = 0;
 	dscroll = -50.0f;
-
-	loadTile(0);
-	//loadTile(1);
 }
 
 BackgroundRenderer::~BackgroundRenderer(void){
 	while(tiles.size() > 0){
+		//TODO
 		//hge->Texture_Free(tiles[0]->tex);
 		delete tiles[0];
 		tiles.erase(tiles.begin(), tiles.begin()+1);

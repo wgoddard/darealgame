@@ -1,6 +1,6 @@
 #include "Playable.h"
 
-Playable::Playable(b2Body * body, HTEXTURE tex, Input *mIn) : Character(body, tex)
+Playable::Playable(HTEXTURE tex, Input *mIn) : Character(tex)
 {
 	characterType = 0;
 	my_state = IDLE;

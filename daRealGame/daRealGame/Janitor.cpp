@@ -1,8 +1,10 @@
 #include "Janitor.h"
 
-Janitor::Janitor(b2Body * body, HTEXTURE tex, Input *mIn) : Playable(body, tex, mIn)
+Janitor::Janitor(HTEXTURE tex, Input *mIn) : Playable(tex, mIn)
 {
 	characterType = 0;
+
+	my_attack_speed *= 1.5;
 }
 
 Janitor::~Janitor(void)

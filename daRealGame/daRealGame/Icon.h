@@ -4,6 +4,8 @@
 #include "hgeFont.h"
 #include "hge.h"
 
+#include <sstream>
+
 #include "Playable.h"
 
 extern HGE *hge;

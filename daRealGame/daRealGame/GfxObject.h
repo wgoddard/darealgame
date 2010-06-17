@@ -7,8 +7,8 @@ class GfxObject :
 	public Collidable
 {
 protected:
-	hgeAnimation* my_anim;
+	hgeAnimation* my_sprite;
 public:
-	GfxObject(b2Body *body, HTEXTURE res);
+	GfxObject(HTEXTURE res);
 	virtual ~GfxObject(void);
 };

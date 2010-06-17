@@ -5,6 +5,6 @@ class Voodoo :
 	public Playable
 {
 public:
-	Voodoo(b2Body * body, HTEXTURE tex, Input *mIn);
+	Voodoo(HTEXTURE tex, Input *mIn);
 	~Voodoo(void);
 };

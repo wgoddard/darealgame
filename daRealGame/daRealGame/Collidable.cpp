@@ -1,8 +1,7 @@
 #include "Collidable.h"
 
-Collidable::Collidable(b2Body *body)
+Collidable::Collidable()
 {
-	my_body = body;
 }
 
 Collidable::~Collidable(void)

@@ -112,10 +112,10 @@ int main (int argc, char * argv[])
 
 		iconsTex = hge->Texture_Load("data/characters/Icons.png");
 
-		players.push_back(new Janitor(0, iconsTex, controllers[0]));
-		players.push_back(new Rockstar(0, iconsTex, controllers[1]));
-		players.push_back(new Ninja(0, iconsTex, controllers[2]));
-		players.push_back(new Voodoo(0, iconsTex, controllers[3]));
+		players.push_back(new Janitor(iconsTex, controllers[0]));
+		players.push_back(new Rockstar(iconsTex, controllers[1]));
+		players.push_back(new Ninja(iconsTex, controllers[2]));
+		players.push_back(new Voodoo(iconsTex, controllers[3]));
 
 		icons.push_back(new Icon(iconsTex, players[0], statFont));
 		icons.push_back(new Icon(iconsTex, players[1], statFont));

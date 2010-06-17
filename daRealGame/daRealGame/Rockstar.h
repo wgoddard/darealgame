@@ -5,6 +5,6 @@ class Rockstar :
 	public Playable
 {
 public:
-	Rockstar(b2Body * body, HTEXTURE tex, Input *mIn);
+	Rockstar(HTEXTURE tex, Input *mIn);
 	~Rockstar(void);
 };

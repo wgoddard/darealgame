@@ -3,14 +3,16 @@
 
 #include "Input.h"
 
-enum States { IDLE, WALK, MELEE, RANGED, SPECIAL, DEATH, VICTORY, JUMP };
-
 class Playable :
 	public Character
 {
 protected:
-	int my_hspeed;
-	int my_vspeed;
+	//getting
+	//float my_max_health;
+	//float my_attack_speed;
+	//float my_ranged_speed;
+	//int my_hspeed;
+	//int my_vspeed;
 
 	States my_state;
 
@@ -19,7 +21,7 @@ protected:
 
 	Input *my_input;
 public:
-	Playable(b2Body * body, HTEXTURE tex, Input *mIn);
+	Playable(HTEXTURE tex, Input *mIn);
 	~Playable(void);
 
 	int getCharacterType(){ return characterType; }

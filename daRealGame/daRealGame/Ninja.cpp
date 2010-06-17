@@ -1,8 +1,11 @@
 #include "Ninja.h"
 
-Ninja::Ninja(b2Body * body, HTEXTURE tex, Input *mIn) : Playable(body, tex, mIn)
+Ninja::Ninja(HTEXTURE tex, Input *mIn) : Playable(tex, mIn)
 {
 	characterType = 2;
+	
+	my_hspeed *= 1.5;
+	my_vspeed *= 1.5;
 }
 
 Ninja::~Ninja(void)
