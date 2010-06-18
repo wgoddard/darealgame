@@ -7,6 +7,7 @@ Icon::Icon(HTEXTURE tex, Playable *player, hgeFont *font)
 	int charType = player->getCharacterType();
 
 	my_sprite = new hgeSprite(tex, 250.0f*charType, 0.0f, 250.0f, 140.0f);
+	my_sprite->SetZ(0.0);
 	my_font = font;
 
 	myQuad = new hgeQuad();
@@ -15,7 +16,7 @@ Icon::Icon(HTEXTURE tex, Playable *player, hgeFont *font)
 
 	for(int i = 0; i < 4; i++){
 		myQuad->v[i].col = 0xFFFF0000;
-		myQuad->v[i].z = 0.5f;
+		myQuad->v[i].z = 0.01f;
 	}
 }
 
@@ -33,7 +34,7 @@ void Icon::Render(float x, float y){
 	int player_mhp = my_player->getMaxHealth();
 	int player_chp = my_player->getHealth();
 
-	float hpPer = 1.0f * player_mhp / player_chp;
+	float hpPer = 1.0f * player_chp / player_mhp;
 
 	myQuad->v[0].x = x + 84; myQuad->v[0].y = y + 44;
 	myQuad->v[1].x = x + 94; myQuad->v[1].y = y + 60;

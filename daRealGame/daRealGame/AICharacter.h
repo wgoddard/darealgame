@@ -7,4 +7,6 @@ class AICharacter :
 public:
 	AICharacter(HTEXTURE tex);
 	~AICharacter(void);
+
+	virtual void Update(float &dt, float x_scroll){ Character::Update(dt, x_scroll); };
 };

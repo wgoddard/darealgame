@@ -25,7 +25,7 @@ void BackgroundRenderer::update(float &dt){
 
 void BackgroundRenderer::render(){
 	for(int i=0; i<(int)tiles.size(); i++){
-		tiles[i]->Render(1024.0f*i + currentScrollPos, 0.0f);
+		tiles[i]->Render((float)(int)(1022.0f*i + currentScrollPos), 0.0f);
 	}
 }
 
@@ -49,6 +49,7 @@ void BackgroundRenderer::loadTile(int x){
 	HTEXTURE blah = hge->Texture_Load(s.data());
 
 	hgeSprite *tempSprite = new hgeSprite(blah, 1, 1, 1022, 720);
+	tempSprite->SetZ(1.0);
 
 	tiles.push_back(tempSprite);
 }

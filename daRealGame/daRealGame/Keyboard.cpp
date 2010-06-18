@@ -27,6 +27,8 @@ void Keyboard::update(){
 		dy = 0.0;
 	}
 
+	stateStart = (hge->Input_GetKeyState(HGEK_ENTER) || hge->Input_GetKeyState(HGEK_Q));
+
 	stateA = (hge->Input_GetKeyState(HGEK_H) || hge->Input_GetKeyState(HGEK_Z));
 	stateB = (hge->Input_GetKeyState(HGEK_J) || hge->Input_GetKeyState(HGEK_X));
 	stateC = (hge->Input_GetKeyState(HGEK_K) || hge->Input_GetKeyState(HGEK_C));

@@ -6,6 +6,7 @@ Input::Input(void)
 	stateB = false;
 	stateC = false;
 	stateD = false;
+	stateStart = false;
 	dx = 0.0;
 	dy = 0.0;
 	ax = 0.0;

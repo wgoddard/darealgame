@@ -1,7 +1,12 @@
 #pragma once
 #include "character.h"
 
+#include <vector>
+
 #include "Input.h"
+#include "KillSquare.h"
+
+extern std::vector<KillSquare*> playerHazards;
 
 class Playable :
 	public Character
@@ -14,10 +19,11 @@ protected:
 	//int my_hspeed;
 	//int my_vspeed;
 
-	States my_state;
+	//States my_state;
 
 	int characterType;
 	int numKills;
+	float secTimer;
 
 	Input *my_input;
 public:
@@ -26,5 +32,8 @@ public:
 
 	int getCharacterType(){ return characterType; }
 
-	void Update(float &dt, float rel_x_speed);
+	virtual void Update(float &dt, float rel_x_speed);
+	virtual void Melee(){};
+
+	Input* getInput(){ return my_input; }
 };

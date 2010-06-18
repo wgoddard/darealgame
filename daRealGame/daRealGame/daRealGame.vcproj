@@ -60,7 +60,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="hge.lib hgehelp.lib xinput.lib box2d_d.lib tinyxmld.lib"
+				AdditionalDependencies="hge.lib hgehelp.lib xinput.lib"
 				LinkIncremental="2"
 				IgnoreDefaultLibraryNames="LIBC.lib"
 				GenerateDebugInformation="true"
@@ -134,7 +134,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="hge.lib hgehelp.lib xinput.lib"
 				LinkIncremental="1"
+				IgnoreDefaultLibraryNames="libc.lib"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				OptimizeReferences="2"
@@ -184,25 +186,33 @@
 					>
 				</File>
 				<File
-					RelativePath=".\Controller.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\GfxObject.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\Input.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Keyboard.cpp"
+					RelativePath=".\KillSquare.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\Object.cpp"
 					>
 				</File>
+				<Filter
+					Name="Input"
+					>
+					<File
+						RelativePath=".\Controller.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Input.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Keyboard.cpp"
+						>
+					</File>
+				</Filter>
 			</Filter>
 			<Filter
 				Name="People"
@@ -222,6 +232,10 @@
 				<Filter
 					Name="Enemies"
 					>
+					<File
+						RelativePath=".\Boxer.cpp"
+						>
+					</File>
 				</Filter>
 				<Filter
 					Name="Playable"
@@ -255,18 +269,6 @@
 					RelativePath=".\BackgroundRenderer.cpp"
 					>
 				</File>
-				<File
-					RelativePath=".\Layer.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Level.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\World.cpp"
-					>
-				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -275,7 +277,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\Boxer.h"
+				>
+			</File>
+			<File
 				RelativePath=".\global.h"
+				>
+			</File>
+			<File
+				RelativePath=".\KillSquare.h"
 				>
 			</File>
 			<Filter
@@ -283,18 +293,6 @@
 				>
 				<File
 					RelativePath=".\BackgroundRenderer.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Layer.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Level.h"
-					>
-				</File>
-				<File
-					RelativePath=".\World.h"
 					>
 				</File>
 			</Filter>
@@ -306,25 +304,29 @@
 					>
 				</File>
 				<File
-					RelativePath=".\Controller.h"
-					>
-				</File>
-				<File
 					RelativePath=".\GfxObject.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Input.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Keyboard.h"
 					>
 				</File>
 				<File
 					RelativePath=".\Object.h"
 					>
 				</File>
+				<Filter
+					Name="Input"
+					>
+					<File
+						RelativePath=".\Controller.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Input.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Keyboard.h"
+						>
+					</File>
+				</Filter>
 			</Filter>
 			<Filter
 				Name="People"

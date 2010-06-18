@@ -23,6 +23,7 @@ void Controller::update(){
 		stateB = (int)(state.Gamepad.wButtons & XINPUT_GAMEPAD_B) || state.Gamepad.bLeftTrigger > 10;
 		stateC = (int)(state.Gamepad.wButtons & XINPUT_GAMEPAD_X) || (int)(state.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER);
 		stateD = (int)(state.Gamepad.wButtons & XINPUT_GAMEPAD_Y) || (int)(state.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER);
+		stateStart = (int)(state.Gamepad.wButtons & XINPUT_GAMEPAD_START);
 
 		if(abs(state.Gamepad.sThumbLX) > XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE || 
 			abs(state.Gamepad.sThumbLY) > XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE){

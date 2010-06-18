@@ -7,6 +7,7 @@ protected:
 	bool stateB;
 	bool stateC;
 	bool stateD;
+	bool stateStart;
 	double dx;
 	double dy;
 	double ax;
@@ -19,6 +20,7 @@ public:
 	bool GetB(void){ return stateB; }
 	bool GetC(void){ return stateC; }
 	bool GetD(void){ return stateD; }
+	bool GetStart(void){ return stateStart; }
 
 	double GetX(void){ return dx; }
 	double GetY(void){ return dy; }

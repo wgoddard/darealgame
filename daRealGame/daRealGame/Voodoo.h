@@ -7,4 +7,7 @@ class Voodoo :
 public:
 	Voodoo(HTEXTURE tex, Input *mIn);
 	~Voodoo(void);
+
+	void Update(float &dt, float rel_x_speed);
+	void Melee();
 };
