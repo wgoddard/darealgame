@@ -121,6 +121,10 @@ bool FrameFunc()
 	for(i=0; i < (int)controllers.size(); i++){
 		controllers[i]->update();
 
+		if(i==0){
+			std::cout << controllers[0]->GetA() << " " << controllers[0]->GetB() << " " << controllers[0]->GetC() << " " << controllers[0]->GetD() << std::endl;
+		}
+
 		if(controllers[i]->GetA()){
 			players.push_back(new Voodoo(voodooTex, controllers[i]));
 			icons.push_back(new Icon(iconsTex, players[players.size()-1], statFont));
@@ -248,7 +252,7 @@ int main (int argc, char * argv[])
 		iconsTex = hge->Texture_Load("data/characters/Players/Icons.png");
 		
 		rockstarTex = hge->Texture_Load("data/characters/Players/Rockstar.png");
-		ninjaTex = hge->Texture_Load("data/characters/Players/Blank.png");
+		ninjaTex = hge->Texture_Load("data/characters/Players/Ninja.png");
 		voodooTex = hge->Texture_Load("data/characters/Players/Voodoo.png");
 		janitorTex = hge->Texture_Load("data/characters/Players/Blank.png");
 

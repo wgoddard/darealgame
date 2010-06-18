@@ -10,4 +10,5 @@ public:
 
 	void Update(float &dt, float rel_x_speed);
 	void Melee();
+	void Ranged() {};
 };

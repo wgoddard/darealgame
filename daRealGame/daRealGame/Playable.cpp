@@ -37,6 +37,8 @@ void Playable::Update(float &dt, float rel_x_speed){
 			my_state = SPECIAL;
 		} else if(my_input->GetD()){
 			my_state = DEATH;
+		} else if(my_input->GetStart()){
+			my_state = VICTORY;
 		}
 	}
 

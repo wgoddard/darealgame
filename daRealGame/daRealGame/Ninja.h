@@ -7,4 +7,6 @@ class Ninja :
 public:
 	Ninja(HTEXTURE tex, Input *mIn);
 	~Ninja(void);
+	void Melee() {};
+	void Ranged() {};
 };

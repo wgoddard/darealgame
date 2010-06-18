@@ -7,4 +7,7 @@ class Janitor :
 public:
 	Janitor(HTEXTURE tex, Input *mIn);
 	~Janitor(void);
+
+	void Melee() {};
+	void Ranged() {};
 };

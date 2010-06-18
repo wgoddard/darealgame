@@ -33,7 +33,8 @@ public:
 	int getCharacterType(){ return characterType; }
 
 	virtual void Update(float &dt, float rel_x_speed);
-	virtual void Melee(){};
+	virtual void Melee() = 0;
+	virtual void Ranged() = 0;
 
 	Input* getInput(){ return my_input; }
 };
